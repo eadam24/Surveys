@@ -151,6 +151,7 @@
             button_right.TabIndex = 12;
             button_right.Text = "--->";
             button_right.UseVisualStyleBackColor = true;
+            button_right.Click += button_right_Click;
             // 
             // button_left
             // 
@@ -160,6 +161,7 @@
             button_left.TabIndex = 13;
             button_left.Text = "<---";
             button_left.UseVisualStyleBackColor = true;
+            button_left.Click += button_left_Click;
             // 
             // Guitar
             // 

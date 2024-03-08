@@ -148,5 +148,34 @@ namespace Surveys
         {
 
         }
+
+        private void button_right_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i <= chosenHobbies.Items.Count; i++)
+            {
+                if (chosenHobbies.SelectedIndex == i)
+                {
+                    listBox1.Items.Add(chosenHobbies.SelectedItem);
+                    chosenHobbies.Items.Remove(chosenHobbies.SelectedItem);
+
+                }
+
+            }
+        }
+
+        private void button_left_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i <= listBox1.Items.Count; i++)
+            {
+                if (listBox1.SelectedIndex == i)
+                {
+                    chosenHobbies.Items.Add(listBox1.SelectedItem);
+
+                    listBox1.Items.Remove(listBox1.SelectedItem);
+
+                }
+
+            }
+        }
     }
 }
