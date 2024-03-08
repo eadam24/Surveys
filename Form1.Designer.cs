@@ -117,7 +117,7 @@
             // 
             // submitButton
             // 
-            submitButton.Location = new Point(12, 294);
+            submitButton.Location = new Point(8, 348);
             submitButton.Name = "submitButton";
             submitButton.Size = new Size(112, 34);
             submitButton.TabIndex = 9;

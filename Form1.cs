@@ -155,6 +155,7 @@ namespace Surveys
             {
                 if (chosenHobbies.SelectedIndex == i)
                 {
+                    hobbies.Add(chosenHobbies.SelectedItem.ToString());
                     listBox1.Items.Add(chosenHobbies.SelectedItem);
                     chosenHobbies.Items.Remove(chosenHobbies.SelectedItem);
 
@@ -169,6 +170,8 @@ namespace Surveys
             {
                 if (listBox1.SelectedIndex == i)
                 {
+                    hobbies.Remove(chosenHobbies.SelectedItem.ToString());
+
                     chosenHobbies.Items.Add(listBox1.SelectedItem);
 
                     listBox1.Items.Remove(listBox1.SelectedItem);
