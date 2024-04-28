@@ -163,22 +163,22 @@ namespace Surveys
 
             }
         }
-
         private void button_left_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i <= listBox1.Items.Count; i++)
+            if (listBox1.SelectedIndex != -1) 
             {
-                if (listBox1.SelectedIndex == i)
+                var itemToRemove = listBox1.SelectedItem.ToString();
+
+                if (hobbies.Contains(itemToRemove))
                 {
-                    hobbies.Remove(chosenHobbies.SelectedItem.ToString());
-
-                    chosenHobbies.Items.Add(listBox1.SelectedItem);
-
-                    listBox1.Items.Remove(listBox1.SelectedItem);
-
+                    hobbies.Remove(itemToRemove);
                 }
 
+                chosenHobbies.Items.Add(itemToRemove); 
+                listBox1.Items.Remove(itemToRemove); 
             }
         }
+
+
     }
 }
